@@ -78,3 +78,7 @@ margin-left: 20px;
 .submit:hover {
   transform: scale(1.1);
 }
+.submit:disabled {
+  transform: scale(1);
+  border-color: red;
+}
