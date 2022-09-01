@@ -11,3 +11,70 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+fieldset>p {
+  display: inline-block;
+}
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  
+}
+legend {
+  font-weight: bold;
+  font-size: 18px;
+}
+legend>span {
+  color:red;
+}
+label {
+  display: inline-block;
+  font-size: 15px;
+  color:rgba(0, 0, 0, 0.288);
+  margin-top: 10px;
+}
+input {
+  display: block;
+}
+input::placeholder {
+  padding-left: 10px;
+  font-size: 18px;
+  color: black;
+}
+.inputShort {
+  width: 320px;
+  height: 40px ;
+  border-radius: 3px;
+  border-color: rgba(0, 0, 0, 0.212);
+}
+.firstShort {
+  margin-right: 30px;
+}
+
+.inputLong {
+  width: 680px;
+  height: 40px ;
+  border-radius: 3px;
+  border-color: rgba(0, 0, 0, 0.212);
+}
+.submit {
+width: 200px;
+height: 50px;
+border: 2px solid rgba(0, 128, 0, 0.315);
+border-radius: 3px;
+background-color: transparent;
+font-size: 18px;
+color: rgba(0, 0, 0, 0.308);
+cursor: pointer;
+transition: 0.5s;
+margin-top: 20px;
+margin-left: 20px;
+}
+.submit:hover {
+  transform: scale(1.1);
+}
