@@ -119,7 +119,7 @@ export const Form = () => {
             </fieldset>          
             <fieldset>
                 <legend>
-                    Adress&nbsp;&nbsp;<span>*</span>           
+                    Address&nbsp;&nbsp;<span>*</span>           
                 </legend>
                 <p>
                     {(inputDirty.streetAdr && inputError.streetAdr) && <div style={{color: 'red'}}>{inputError.streetAdr}</div>}
@@ -186,7 +186,7 @@ export const Form = () => {
                     <input type="tel" 
                     name='phone' 
                     className='inputShort' 
-                    placeholder='(000)000-0000' 
+                    placeholder='(000)&nbsp;000-0000' 
                     value={inputValues.phone} 
                     onChange={handleOnChange}
                     onBlur={blurHandler} 
