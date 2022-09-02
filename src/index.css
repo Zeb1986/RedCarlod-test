@@ -20,9 +20,15 @@ fieldset {
 fieldset>p {
   display: inline-block;
   margin-top: 10px;
+  position: relative;
 }
 fieldset>p:first-of-type {
   margin-top: 15px;
+}
+p>div {
+  position: absolute;
+  left: 0;
+  top: -22px;
 }
 .container {
   max-width: 730px;

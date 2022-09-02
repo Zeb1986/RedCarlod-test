@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 export const Form = () => {
+    const emptyInput = 'Can not be empty';
     const [inputValues, setInputValues] = useState({ 
         firstName: '',
         lastName: '',
@@ -25,18 +26,19 @@ export const Form = () => {
         mail: false,
       });
       const [inputError, setInputError] = useState({ 
-        firstName: 'Can not be empty',
-        lastName: 'Can not be empty',
-        streetAdr: 'Can not be empty',
-        streetAdr2: 'Can not be empty',
-        city: 'Can not be empty',
-        state: 'Can not be empty',
-        postal: 'Can not be empty',
-        phone: 'Can not be empty',
-        mail: 'Can not be empty',
+        firstName: emptyInput,
+        lastName: emptyInput,
+        streetAdr: emptyInput,
+        streetAdr2: emptyInput,
+        city: emptyInput,
+        state: emptyInput,
+        postal: emptyInput,
+        phone: emptyInput,
+        mail: emptyInput,
       });
       const [formValid, setFormValid] = useState(false)
 
+      
       useEffect(()=>{
         for (let key in inputError) {
             if (inputError[key] !== '') {
@@ -53,7 +55,7 @@ export const Form = () => {
     const { name, value } = event.target;
         setInputValues({ ...inputValues, [name]: value });
         if (value === '') {
-            setInputError({ ...inputError, [name]: 'Can not be empty' });
+            setInputError({ ...inputError, [name]: emptyInput });
         } else {
             setInputError({ ...inputError, [name]: '' });
         }       
@@ -65,14 +67,7 @@ export const Form = () => {
         }
     };
     
-    // const emptyCheck = (event) => {
-    //     const { name, value } = event.target;       
-    //     if (value === '') {
-    //         setInputError({ ...inputError, [name]: 'Can not be empty' });
-    //     } else {
-    //         setInputError({ ...inputError, [name]: '' });
-    //     }
-    // }
+
 
     const handleSubmit = event => {
         console.log(inputValues)
