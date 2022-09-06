@@ -12,6 +12,17 @@ code {
     monospace;
 }
 
+form{
+  position: relative;
+  padding-top: 100px;
+}
+img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 fieldset {
   border: none;
   padding: 0;
@@ -20,15 +31,13 @@ fieldset {
 fieldset>p {
   display: inline-block;
   margin-top: 10px;
-  position: relative;
 }
 fieldset>p:first-of-type {
   margin-top: 15px;
 }
-p>div {
-  position: absolute;
-  left: 0;
-  top: -22px;
+p>span {
+  display: inline-block;
+  margin-bottom: 5px;
 }
 .container {
   max-width: 730px;
@@ -95,7 +104,7 @@ transition: 0.5s;
 .submit:hover {
   transform: scale(1.05);
 }
-.submit:disabled {
+.submit:disabled:hover {
   border-color: red;
   transform: scale(1);
 }

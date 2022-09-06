@@ -59,7 +59,7 @@ export const Form = () => {
         } else {
             setInputError({ ...inputError, [name]: '' });
         }       
-        if (name === 'phone' && !/\(\d{3}\)\d{3}-\d{2}-\d{2}/.test(String(value))) {
+        if (name === 'phone' && !/\d{10}/.test(String(value))) {
             setInputError({ ...inputError, [name]: 'Enter correct phone' });
         }
         if (name === 'mail' && !/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(String(value).toLowerCase())) {
@@ -90,7 +90,7 @@ export const Form = () => {
                     Full Name&nbsp;&nbsp;<span>*</span>           
                 </legend>
                 <p>
-                    {(inputDirty.firstName && inputError.firstName) && <div style={{color: 'red'}}>{inputError.firstName}</div>}
+                    {(inputDirty.firstName && inputError.firstName) && <span style={{color: 'red'}}>{inputError.firstName}</span>}
                     <input type="text" 
                     name='firstName' 
                     className='inputShort firstShort' 
@@ -101,7 +101,7 @@ export const Form = () => {
                     <label htmlFor="firstName">First Name</label>                 
                 </p>
                 <p>
-                    {(inputDirty.lastName && inputError.lastName) && <div style={{color: 'red'}}>{inputError.lastName}</div>}   
+                    {(inputDirty.lastName && inputError.lastName) && <span style={{color: 'red'}}>{inputError.lastName}</span>}   
                     <input type="text" 
                     name='lastName' 
                     className='inputShort' 
@@ -117,7 +117,7 @@ export const Form = () => {
                     Address&nbsp;&nbsp;<span>*</span>           
                 </legend>
                 <p>
-                    {(inputDirty.streetAdr && inputError.streetAdr) && <div style={{color: 'red'}}>{inputError.streetAdr}</div>}
+                    {(inputDirty.streetAdr && inputError.streetAdr) && <span style={{color: 'red'}}>{inputError.streetAdr}</span>}
                     <input type="text" 
                     name='streetAdr' 
                     className='inputLong' 
@@ -128,7 +128,7 @@ export const Form = () => {
                     <label htmlFor="streetAdr">Street Adress</label>
                 </p>
                 <p>
-                    {(inputDirty.streetAdr2 && inputError.streetAdr2) && <div style={{color: 'red'}}>{inputError.streetAdr2}</div>}
+                    {(inputDirty.streetAdr2 && inputError.streetAdr2) && <span style={{color: 'red'}}>{inputError.streetAdr2}</span>}
                     <input type="text" 
                     name='streetAdr2' 
                     className='inputLong' 
@@ -139,7 +139,7 @@ export const Form = () => {
                     <label htmlFor="streetAdr2">Street Adress Line 2</label>
                 </p>
                 <p>
-                    {(inputDirty.city && inputError.city) && <div style={{color: 'red'}}>{inputError.city}</div>}
+                    {(inputDirty.city && inputError.city) && <span style={{color: 'red'}}>{inputError.city}</span>}
                     <input type="text" 
                     name='city' 
                     className='inputShort firstShort' 
@@ -150,7 +150,7 @@ export const Form = () => {
                     <label htmlFor="city">City</label>
                 </p>
                 <p>
-                    {(inputDirty.state && inputError.state) && <div style={{color: 'red'}}>{inputError.state}</div>}
+                    {(inputDirty.state && inputError.state) && <span style={{color: 'red'}}>{inputError.state}</span>}
                     <input type="text" 
                     name='state' 
                     className='inputShort' 
@@ -161,7 +161,7 @@ export const Form = () => {
                     <label htmlFor="state">State / Province</label>
                 </p>
                 <p>
-                    {(inputDirty.postal && inputError.postal) && <div style={{color: 'red'}}>{inputError.postal}</div>}
+                    {(inputDirty.postal && inputError.postal) && <span style={{color: 'red'}}>{inputError.postal}</span>}
                     <input type="text" 
                     name='postal' 
                     className='inputLong' 
@@ -177,7 +177,7 @@ export const Form = () => {
                     Phone Numner&nbsp;&nbsp;<span>*</span>           
                 </legend>
                 <p>
-                    {(inputDirty.phone && inputError.phone) && <div style={{color: 'red'}}>{inputError.phone}</div>}
+                    {(inputDirty.phone && inputError.phone) && <span style={{color: 'red'}}>{inputError.phone}</span>}
                     <input type="tel" 
                     name='phone' 
                     className='inputShort' 
@@ -193,7 +193,7 @@ export const Form = () => {
                     E-mail&nbsp;&nbsp;<span>*</span>           
                 </legend>
                 <p>
-                    {(inputDirty.mail && inputError.mail) && <div style={{color: 'red'}}>{inputError.mail}</div>}
+                    {(inputDirty.mail && inputError.mail) && <span style={{color: 'red'}}>{inputError.mail}</span>}
                     <input type="email" 
                     name='mail' 
                     className='inputShort' 
